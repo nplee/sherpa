@@ -1336,7 +1336,7 @@ def create_delta_rmf(rmflo, rmfhi, offset=1,
     nchans = rmflo.size
     matrix = numpy.ones(nchans, dtype=numpy.float32)
     dummy = numpy.ones(nchans, dtype=numpy.int16)
-    f_chan = numpy.arange(1, nchans + 1, dtype=numpy.int16)
+    f_chan = numpy.arange(offset, nchans + offset, dtype=numpy.int16)
 
     if e_min is None:
         e_min = rmflo
